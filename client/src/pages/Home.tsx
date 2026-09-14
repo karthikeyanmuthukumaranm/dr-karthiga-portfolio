@@ -16,14 +16,14 @@ import {
 } from "lucide-react";
 
 const images = {
-  hero: "/manus-storage/doctor-portrait_3327fa42.png",
-  consultation: "/manus-storage/consultation_226d4a54.png",
-  story: "/manus-storage/patient-story_a31cca3b.png",
-  care: "/manus-storage/clinic-care_062f70f8.png",
-  community: "/manus-storage/care-community_07878a2d.png",
-  standing: "/manus-storage/doctor-standing_28dc81f4.jpeg",
-  alt: "/manus-storage/doctor-portrait-alt_277e58f1.jpeg",
-  logo: "/manus-storage/evk-logo_e9a856d3.jpeg",
+  hero: "/images/doctor-portrait.png",
+  consultation: "/images/consultation.png",
+  story: "/images/patient-story.png",
+  care: "/images/clinic-care.png",
+  community: "/images/care-community.png",
+  standing: "/images/doctor-standing.jpeg",
+  alt: "/images/doctor-portrait-alt.jpeg",
+  logo: "/images/evk-logo.jpeg",
 };
 
 const navItems = [
