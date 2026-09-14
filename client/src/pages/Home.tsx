@@ -22,7 +22,7 @@ const images = {
   care: "/images/clinic-care.png",
   community: "/images/care-community.png",
   standing: "/images/doctor-standing.jpeg",
-  alt: "/images/evk-banner-card.jpg",
+  alt: "/images/dr-karthiga-hero-portrait.jpg",
   logo: "/images/evk-logo.jpeg",
 };
 

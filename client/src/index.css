@@ -177,7 +177,7 @@
 .focus-copy h2 { font-size:clamp(46px, 5vw, 71px); }
 .focus-copy > p:not(.eyebrow) { max-width:385px; margin:28px 0 30px; color:#66756a; font-size:14px; line-height:1.75; }
 .focus-image { position:relative; }
-.focus-image img { width:100%; max-height:470px; min-height:350px; object-fit:cover; object-position:center top; filter:saturate(.85); }
+.focus-image img { width:100%; max-height:470px; min-height:350px; object-fit:cover; object-position:65% 25%; filter:saturate(.87); }
 .focus-stamp { position:absolute; right:-18px; bottom:25px; display:flex; align-items:center; gap:7px; padding:12px 14px; color:#ebf3dc; background:#6c8c30; font-size:10px; letter-spacing:.06em; }
 .focus-tags { display:grid; grid-template-columns:35px 1fr; align-items:center; row-gap:22px; border-top:1px solid #bdcbb9; }
 .focus-tags > span { color:#71853f; font-size:11px; }
