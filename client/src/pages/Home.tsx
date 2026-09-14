@@ -16,13 +16,13 @@ import {
 } from "lucide-react";
 
 const images = {
-  hero: "/images/doctor-portrait.png",
+  hero: "/images/dr-karthiga-hero-portrait.jpg",
   consultation: "/images/consultation.png",
   story: "/images/patient-story.png",
   care: "/images/clinic-care.png",
   community: "/images/care-community.png",
   standing: "/images/doctor-standing.jpeg",
-  alt: "/images/doctor-portrait-alt.jpeg",
+  alt: "/images/evk-banner-card.jpg",
   logo: "/images/evk-logo.jpeg",
 };
 
