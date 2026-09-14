@@ -160,7 +160,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer"><div className="container footer-inner"><div className="footer-logo-lockup"><img src={images.logo} alt="EVK Siddha Clinique Pondichéry logo" /></div><p>Traditional care for contemporary lives.</p><span>© {new Date().getFullYear()} EVK Siddha Hospitals</span></div></footer>
+      <footer className="site-footer"><div className="container footer-inner"><div className="footer-logo-lockup"><img src={images.logo} alt="EVK Siddha Clinique Pondichéry logo" /></div><p>Traditional care for contemporary lives.</p><span>© {new Date().getFullYear()} EVK Siddha Hospitals</span><div className="footer-portrait"><img src={images.hero} alt="Dr. E. Karthiga" /></div></div></footer>
     </main>
   );
 }

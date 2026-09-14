@@ -111,7 +111,7 @@
 .hero-visual { position:relative; align-self:stretch; display:flex; align-items:center; justify-content:center; padding: 50px 18px 50px 0; }
 .portrait-frame { position:relative; width:min(100%, 486px); aspect-ratio:.82; overflow:hidden; background:#d6e2ce; border-radius: 0 0 47% 47%; box-shadow: 25px 22px 0 rgba(172,215,51,.18); }
 .portrait-frame:before { content:""; position:absolute; z-index:2; inset: 16px; border:1px solid rgba(247,244,237,.58); border-radius: 0 0 47% 47%; pointer-events:none; }
-.portrait-frame img { width:100%; height:100%; object-fit:cover; object-position: center 20%; filter:saturate(.87) contrast(.96); transform:scale(1.02); }
+.portrait-frame img { width:100%; height:100%; object-fit:cover; object-position: 65% 25%; filter:saturate(.87) contrast(.96); transform:scale(1.02); }
 .portrait-wash { position:absolute; inset:0; background:linear-gradient(180deg, rgba(27,60,52,.07), transparent 35%, rgba(27,60,52,.12)); }
 .hero-badge { position:absolute; left:-3px; top: 152px; display:flex; align-items:center; gap:11px; padding:14px 15px; color:#eef3dc; background:#789635; box-shadow: 0 12px 22px rgba(57,84,30,.17); }
 .hero-badge svg { color:#d8ec9d; }
@@ -202,7 +202,9 @@
 .detail small { display:block; color:#abc0ac; font-size:9px; letter-spacing:.14em; text-transform:uppercase; }
 .detail p { margin:7px 0 0; color:#edf2e6; font-family:var(--serif); font-size:18px; line-height:1.25; }
 .site-footer { background:#15332b; }
-.footer-inner { display:flex; align-items:center; justify-content:space-between; min-height:94px; gap:20px; }
+.footer-inner { display:flex; align-items:center; justify-content:space-between; min-height:110px; gap:20px; }
+.footer-portrait { width:88px; height:88px; border-radius:50%; overflow:hidden; border:3px solid rgba(172,215,51,.45); flex:none; }
+.footer-portrait img { width:100%; height:100%; object-fit:cover; object-position:65% 18%; }
 .footer-logo-lockup { display:flex; align-items:center; justify-content:center; width:120px; height:86px; overflow:hidden; padding:5px; background:#fff; border-radius:8px; }
 .footer-logo-lockup img { width:100%; height:100%; object-fit:contain; }
 .footer-brand small, .footer-inner p, .footer-inner > span { color:#97af9d; }
