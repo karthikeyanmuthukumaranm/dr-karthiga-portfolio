@@ -409,7 +409,7 @@ export default function Home() {
             <div className="brand-text-wrap">
               <span className="brand-name">EVK SIDDHA CLINIC</span>
               <div className="brand-sub">
-                <span className="brand-tamil">சித்த மருத்துவ மனை</span>
+                <span className="brand-tamil">சித்த மருத்துவமனை</span>
                 <span className="brand-sep">·</span>
                 <span className="brand-slogan">Traditionally Redefining</span>
               </div>
@@ -472,7 +472,7 @@ export default function Home() {
                   <img src={images.logo} alt="EVK Logo" style={{ width: "36px", height: "36px", objectFit: "contain" }} />
                   <div>
                     <strong style={{ display: "block", fontSize: "14px", color: "#1b3c34" }}>EVK SIDDHA CLINIC</strong>
-                    <span style={{ fontSize: "10px", color: "#5d7367" }}>சித்த மருத்துவ மனை · Estd 2016</span>
+                    <span style={{ fontSize: "10px", color: "#5d7367" }}>சித்த மருத்துவமனை · Estd 2016</span>
                   </div>
                 </div>
                 <button
@@ -531,7 +531,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <p className="eyebrow">
-              <span className="eyebrow-line" /> Siddha Physician · Puducherry | சித்த மருத்துவ மனை
+              <span className="eyebrow-line" /> Siddha Physician · Puducherry | சித்த மருத்துவமனை
             </p>
             <h1>
               Care rooted in <em>tradition.</em>
@@ -1687,7 +1687,7 @@ export default function Home() {
                 <small>Updated Clinic Address</small>
                 <p>
                   <strong style={{ display: "block", color: "#ffffff", fontSize: "15px" }}>
-                    EVK Siddha Clinic (சித்த மருத்துவ மனை)
+                    EVK Siddha Clinic (சித்த மருத்துவமனை)
                   </strong>
                   No. 57, M.G. Road, Heritage Town,
                   <br />
@@ -1746,7 +1746,7 @@ export default function Home() {
             <img src={images.logo} alt="EVK Siddha Clinic Emblem" />
             <div className="footer-logo-text">
               <strong>EVK SIDDHA CLINIC</strong>
-              <small>சித்த மருத்துவ மனை · Pondicherry</small>
+              <small>சித்த மருத்துவமனை · Pondicherry</small>
             </div>
           </div>
 
