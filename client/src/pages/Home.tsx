@@ -281,18 +281,28 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-const navItems = [
-  ["About", "about"],
-  ["Wellness Tourism", "wellness-tourism"],
-  ["Services & Medicine", "medicines"],
-  ["Natural Approach", "approach"],
-  ["Women's Care", "women"],
-  ["Elderly Care", "elderly"],
-  ["Online Consult", "online-consult"],
-  ["Thirukkural", "kural"],
-  ["Gallery", "gallery"],
-  ["Reviews", "testimonials"],
-  ["Contact", "contact"],
+const desktopNavItems = [
+  { label: "About", id: "about" },
+  { label: "Wellness Tourism", id: "wellness-tourism", isHighlight: true },
+  { label: "Treatments", id: "medicines" },
+  { label: "Natural Approach", id: "approach" },
+  { label: "Reviews", id: "testimonials" },
+  { label: "Contact", id: "contact" },
+];
+
+const mobileNavItems = [
+  { label: "About EVK Siddha Clinic", id: "about" },
+  { label: "Wellness Tourism Concept", id: "wellness-tourism", isHighlight: true },
+  { label: "Personalized Services & Medicines", id: "medicines" },
+  { label: "Traditional Siddha Natural Approach", id: "approach" },
+  { label: "Women's Healthcare Guidance", id: "women" },
+  { label: "Personalized Elderly Healthcare Support", id: "elderly" },
+  { label: "Consult Our Doctor Online (6 Steps)", id: "online-consult", isHighlight: true },
+  { label: "Thirukkural Diagnostic Philosophy", id: "kural" },
+  { label: "Inside Clinic & Temple Landmark", id: "clinic" },
+  { label: "Verified Patient Reviews (5.0★)", id: "testimonials" },
+  { label: "Photo Gallery & Honors", id: "gallery" },
+  { label: "Clinic Location & Appointments", id: "contact" },
 ];
 
 export default function Home() {
@@ -406,13 +416,13 @@ export default function Home() {
             </div>
           </button>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Clean, Uncrowded 6 Core Sections */}
           <nav className="desktop-nav" aria-label="Primary navigation">
-            {navItems.map(([label, id]) => (
+            {desktopNavItems.map(({ label, id, isHighlight }) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className={id === "wellness-tourism" || id === "online-consult" ? "is-special" : ""}
+                className={isHighlight ? "is-special" : ""}
               >
                 {label}
               </button>
@@ -421,7 +431,7 @@ export default function Home() {
 
           {/* Header Action Buttons */}
           <div className="nav-actions">
-            <a className="nav-phone-pill" href="tel:+916374514716">
+            <a className="nav-phone-pill" href="tel:+916374514716" title="Call EVK Siddha Clinic">
               <Phone size={14} /> <span>+91 6374514716</span>
             </a>
             <button className="nav-book-btn" onClick={() => scrollTo("online-consult")}>
@@ -432,13 +442,14 @@ export default function Home() {
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle navigation menu"
             >
-              {menuOpen ? <X size={20} /> : <MenuIcon size={20} />}
+              {menuOpen ? <X size={18} /> : <MenuIcon size={18} />}
+              <span style={{ fontSize: "12px", marginLeft: "4px" }}>Menu</span>
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile & Tablet Full Sitemap Drawer */}
       <AnimatePresence>
         {menuOpen && (
           <>
@@ -461,7 +472,7 @@ export default function Home() {
                   <img src={images.logo} alt="EVK Logo" style={{ width: "36px", height: "36px", objectFit: "contain" }} />
                   <div>
                     <strong style={{ display: "block", fontSize: "14px", color: "#1b3c34" }}>EVK SIDDHA CLINIC</strong>
-                    <span style={{ fontSize: "10px", color: "#5d7367" }}>சித்த மருத்துவ மனை</span>
+                    <span style={{ fontSize: "10px", color: "#5d7367" }}>சித்த மருத்துவ மனை · Estd 2016</span>
                   </div>
                 </div>
                 <button
@@ -474,10 +485,11 @@ export default function Home() {
               </div>
 
               <div className="mobile-menu-links">
-                {navItems.map(([label, id]) => (
+                {mobileNavItems.map(({ label, id, isHighlight }) => (
                   <button
                     key={id}
                     className="mobile-nav-link"
+                    style={isHighlight ? { background: "#eef6dc", color: "#2d5218", fontWeight: "600" } : {}}
                     onClick={() => scrollTo(id)}
                   >
                     <span>{label}</span>
