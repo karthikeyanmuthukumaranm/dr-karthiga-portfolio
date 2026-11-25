@@ -975,17 +975,39 @@
 .section-heading-row h2 {
   font-family: var(--serif);
   font-size: clamp(34px, 4vw, 54px);
-  color: #f3f7ea;
-  line-height: 1.1;
+  color: #1b3c34;
+  line-height: 1.12;
   margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.section-heading-row h2 em {
+  color: #5f7e28;
+  font-style: italic;
 }
 
 .heading-note {
-  max-width: 380px;
-  color: #b5cbbe;
-  font-size: 14px;
+  max-width: 440px;
+  color: #55665d;
+  font-size: 15px;
   line-height: 1.65;
   margin: 0;
+}
+
+/* Dark Section Variant (Thirukkural & Online Consult) */
+.kural-section .section-heading-row h2,
+.online-consult-section .section-heading-row h2 {
+  color: #f3f7ea;
+}
+
+.kural-section .section-heading-row h2 em,
+.online-consult-section .section-heading-row h2 em {
+  color: #d6fa75;
+}
+
+.kural-section .heading-note,
+.online-consult-section .heading-note {
+  color: #c9dfd1;
 }
 
 .kural-card {
@@ -2362,6 +2384,12 @@
   }
   .section-pad {
     padding: 68px 0;
+  }
+  .section-heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
   }
   .philosophy-grid {
     grid-template-columns: 1fr;
