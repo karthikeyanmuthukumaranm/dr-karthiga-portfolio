@@ -435,7 +435,9 @@ export default function Home() {
               <Phone size={14} /> <span>+91 6374514716</span>
             </a>
             <button className="nav-book-btn" onClick={() => scrollTo("online-consult")}>
-              <CalendarDays size={14} /> <span>Consult Online</span>
+              <CalendarDays size={14} />
+              <span className="nav-book-text">Consult Online</span>
+              <span className="nav-book-short">Consult</span>
             </button>
             <button
               className="menu-toggle"
@@ -443,7 +445,7 @@ export default function Home() {
               aria-label="Toggle navigation menu"
             >
               {menuOpen ? <X size={18} /> : <MenuIcon size={18} />}
-              <span style={{ fontSize: "12px", marginLeft: "4px" }}>Menu</span>
+              <span className="menu-toggle-label" style={{ fontSize: "12px", marginLeft: "4px" }}>Menu</span>
             </button>
           </div>
         </div>
