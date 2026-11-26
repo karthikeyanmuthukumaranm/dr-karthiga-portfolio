@@ -376,18 +376,18 @@ export default function Home() {
         <div className="container top-line-inner">
           <div className="topline-badge">
             <span className="live-dot" />
-            <span>10+ Years of Experience · Providing Siddha Healthcare Services Since 2016</span>
+            <span>10+ Years Experience · Providing Siddha Healthcare Since 2016</span>
           </div>
 
           <div className="topline-address-snippet">
             <MapPin size={13} />
-            <span>No. 57, M.G. Road, Heritage Town, Pondicherry – 605001, India (Opp. Varadaraja Perumal Temple)</span>
+            <span>No. 57, M.G. Road, Heritage Town, Pondicherry (Opp. Varadaraja Perumal Temple)</span>
           </div>
 
           <div className="topline-actions">
             <a className="flash-pill" href="tel:+916374514716">
               <Sparkles size={12} />
-              <span>Call / Book: +91 6374514716</span>
+              <span>Call: +91 6374514716</span>
             </a>
             <a className="topline-email" href="mailto:evkpondicherry@gmail.com">
               <Mail size={12} /> evkpondicherry@gmail.com
