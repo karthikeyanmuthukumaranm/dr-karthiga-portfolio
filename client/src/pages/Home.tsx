@@ -6,6 +6,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   Award,
+  BookOpen,
   CalendarDays,
   CheckCircle2,
   ChevronDown,
@@ -13,6 +14,7 @@ import {
   ChevronRight,
   Clock3,
   Globe,
+  GraduationCap,
   Heart,
   HeartHandshake,
   Leaf,
@@ -80,9 +82,9 @@ const galleryItems: GalleryItem[] = [
     categoryLabel: "Wellness Tourism",
     title: "International Wellness Consultations",
     subtitle: "Every place is our home! Everyone is our kin!",
-    description: "Dr. Karthigadevi consulting with international visitors and overseas patients under the Wellness Tourism concept in Pondicherry.",
+    description: "Dr. E. Karthiga consulting with international visitors and overseas patients under the Wellness Tourism concept in Pondicherry.",
     src: images.wellnessInternational,
-    alt: "Dr. Karthigadevi with international patient in peaceful garden setting",
+    alt: "Dr. E. Karthiga with international patient in peaceful garden setting",
     badge: "Wellness Tourism",
   },
   {
@@ -135,9 +137,9 @@ const galleryItems: GalleryItem[] = [
     categoryLabel: "Awards & Honors",
     title: "Innovative Healthcare Leader Award",
     subtitle: "S.K.I.N. Awards 2026 · Puducherry",
-    description: "Dr. Karthigadevi honored with the Innovative Healthcare Leader award trophy and Certificate of Achievement by S.K.I.N. Forum (ISO 9001:2015 Certified).",
+    description: "Dr. E. Karthiga honored with the Innovative Healthcare Leader award trophy and Certificate of Achievement by S.K.I.N. Forum (ISO 9001:2015 Certified).",
     src: images.awardLeader,
-    alt: "Dr. Karthigadevi holding S.K.I.N. Awards 2026 trophy and Certificate",
+    alt: "Dr. E. Karthiga holding S.K.I.N. Awards 2026 trophy and Certificate",
     badge: "Awardee 2026",
   },
   {
@@ -159,7 +161,7 @@ const galleryItems: GalleryItem[] = [
     subtitle: "S.K.I.N. Healthcare Summit 2026",
     description: "Honoured by healthcare forum directors, scholars, and medical panel delegates in recognition of dedicated clinical service.",
     src: images.awardPresentation,
-    alt: "Award presentation to Dr. Karthigadevi on stage with dignitaries",
+    alt: "Award presentation to Dr. E. Karthiga on stage with dignitaries",
     badge: "Felicitation",
   },
   {
@@ -168,9 +170,9 @@ const galleryItems: GalleryItem[] = [
     categoryLabel: "France Trip",
     title: "Ministère de la Justice & Place Vendôme",
     subtitle: "Paris, France",
-    description: "Dr. Karthigadevi at historic Place Vendôme in Paris, exploring classical French architecture, history, and international perspectives.",
+    description: "Dr. E. Karthiga at historic Place Vendôme in Paris, exploring classical French architecture, history, and international perspectives.",
     src: images.francePlaceVendome,
-    alt: "Dr. Karthigadevi at Place Vendôme, Paris, France",
+    alt: "Dr. E. Karthiga at Place Vendôme, Paris, France",
     badge: "Paris, France",
   },
   {
@@ -181,7 +183,7 @@ const galleryItems: GalleryItem[] = [
     subtitle: "Paris, France",
     description: "Capturing memorable moments by the illuminated Eiffel Tower at night at Champ de Mars.",
     src: images.franceEiffelPortrait,
-    alt: "Dr. Karthigadevi at the illuminated Eiffel Tower in Paris",
+    alt: "Dr. E. Karthiga at the illuminated Eiffel Tower in Paris",
     badge: "Eiffel Tower",
   },
   {
@@ -192,7 +194,7 @@ const galleryItems: GalleryItem[] = [
     subtitle: "EVK Siddha Clinic · Pondicherry",
     description: "Comprehensive pulse diagnosis (Nadi) and unhurried patient consultations in Heritage Town, opposite Varadaraja Perumal Temple.",
     src: images.consultation,
-    alt: "Dr. Karthigadevi consulting with a patient",
+    alt: "Dr. E. Karthiga consulting with a patient",
     badge: "Consultation",
   },
   {
@@ -227,7 +229,7 @@ const testimonials: Testimonial[] = [
     treatment: "Joint Pain & Lumbar Spondylitis",
     category: "pain",
     quote:
-      "I suffered from severe joint stiffness and lower back pain for over 2 years. Dr. Karthigadevi listened patiently to my history and diagnosed the root cause through pulse diagnosis (Nadi). With her authentic herbal oils and Varma therapies, the stiffness completely vanished within 6 weeks. Truly the best Siddha clinic in Pondicherry!",
+      "I suffered from severe joint stiffness and lower back pain for over 2 years. Dr. E. Karthiga listened patiently to my history and diagnosed the root cause through pulse diagnosis (Nadi). With her authentic herbal oils and Varma therapies, the stiffness completely vanished within 6 weeks. Truly the best Siddha clinic in Pondicherry!",
   },
   {
     id: "rev-2",
@@ -247,7 +249,7 @@ const testimonials: Testimonial[] = [
     treatment: "Psoriasis & Skin Care",
     category: "skin",
     quote:
-      "After trying countless treatments with only temporary relief, EVK Siddha Clinic provided a permanent solution. Dr. Karthigadevi's exclusive herbal face and skin formulation restored healthy skin within two months. Her clinic opposite Varadaraja Perumal Temple is clean, peaceful, and deeply welcoming.",
+      "After trying countless treatments with only temporary relief, EVK Siddha Clinic provided a permanent solution. Dr. E. Karthiga's exclusive herbal face and skin formulation restored healthy skin within two months. Her clinic opposite Varadaraja Perumal Temple is clean, peaceful, and deeply welcoming.",
   },
   {
     id: "rev-4",
@@ -257,7 +259,7 @@ const testimonials: Testimonial[] = [
     treatment: "Immunity & Allergic Sinusitis",
     category: "all",
     quote:
-      "Dr. Karthigadevi combines ancient classical Siddha texts with acute diagnostic clarity. The Mooligai Kudineer decoction has become a morning essential for our whole family—no recurring seasonal colds or sinus headaches for months. A true 5-star clinic with genuine dedication.",
+      "Dr. E. Karthiga combines ancient classical Siddha texts with acute diagnostic clarity. The Mooligai Kudineer decoction has become a morning essential for our whole family—no recurring seasonal colds or sinus headaches for months. A true 5-star clinic with genuine dedication.",
   },
   {
     id: "rev-5",
@@ -267,7 +269,7 @@ const testimonials: Testimonial[] = [
     treatment: "Gastritis & Dietary Lifestyle",
     category: "all",
     quote:
-      "The clinic's atmosphere is calm and reassuring, conveniently situated right opposite Varadaraja Perumal Temple. Dr. Karthigadevi does not rush; she prepared a personalized diet chart according to Siddha principles. My chronic acid reflux healed completely with simple food discipline and medicines.",
+      "The clinic's atmosphere is calm and reassuring, conveniently situated right opposite Varadaraja Perumal Temple. Dr. E. Karthiga does not rush; she prepared a personalized diet chart according to Siddha principles. My chronic acid reflux healed completely with simple food discipline and medicines.",
   },
   {
     id: "rev-6",
@@ -277,7 +279,7 @@ const testimonials: Testimonial[] = [
     treatment: "Wellness Tourism & Online Consultation",
     category: "all",
     quote:
-      "We visited Pondicherry and met Dr. Karthigadevi at EVK Siddha Clinic. Her concept that 'Every place is our home, everyone is our kin' is truly felt. We continue our online follow-up consultations from France with customized diet guidance and herbal wellness advice. Extraordinary care!",
+      "We visited Pondicherry and met Dr. E. Karthiga at EVK Siddha Clinic. Her concept that 'Every place is our home, everyone is our kin' is truly felt. We continue our online follow-up consultations from France with customized diet guidance and herbal wellness advice. Extraordinary care!",
   },
 ];
 
@@ -506,7 +508,7 @@ export default function Home() {
                 </a>
                 <a
                   className="mobile-contact-pill whatsapp"
-                  href="https://wa.me/916374514716?text=Hello%20Dr.%20Karthigadevi,%20I%20would%20like%20to%20book%20a%20consultation"
+                  href="https://wa.me/916374514716?text=Hello%20Dr.%20E.%20Karthiga,%20I%20would%20like%20to%20book%20a%20consultation"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -541,7 +543,7 @@ export default function Home() {
               Traditionally Redefining.
             </h1>
             <p className="hero-intro">
-              <strong>EVK Siddha Clinic</strong> – Traditionally Redefining Wellness Through Siddha Medicine, Personalized Healthcare, Diet, Yoga and Wellness Tourism. Under the supervision of <strong>Dr. Karthigadevi, B.S.M.S.</strong> (Siddha Physician, Reg. No.: 3802).
+              <strong>EVK Siddha Clinic</strong> – Traditionally Redefining Wellness Through Siddha Medicine, Personalized Healthcare, Diet, Yoga and Wellness Tourism. Under the supervision of <strong>Dr. E. Karthiga, B.S.M.S.</strong> (Siddha Physician, Reg. No.: 3802).
             </p>
 
             <div className="hero-cta-row">
@@ -582,7 +584,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <div className="portrait-frame">
-              <img src={images.hero} alt="Dr. Karthigadevi - Founder, EVK Siddha Clinic" />
+              <img src={images.hero} alt="Dr. E. Karthiga - Founder, EVK Siddha Clinic" />
             </div>
 
             {/* Floating Experience Badge */}
@@ -628,7 +630,7 @@ export default function Home() {
                 in <em>Siddha Healthcare.</em>
               </h2>
               <p>
-                <strong>The clinic has been providing Siddha healthcare services since 2016.</strong> Under the experienced supervision of <strong>Dr. Karthigadevi, B.S.M.S.</strong>, EVK Siddha Clinic caters to a wide spectrum of health requirements with personalized attention, classical pulse assessment (நாடிப் பரிசோதனை), and thoughtful lifestyle guidance.
+                <strong>The clinic has been providing Siddha healthcare services since 2016.</strong> Under the experienced supervision of <strong>Dr. E. Karthiga, B.S.M.S.</strong>, EVK Siddha Clinic caters to a wide spectrum of health requirements with personalized attention, classical pulse assessment (நாடிப் பரிசோதனை), and thoughtful lifestyle guidance.
               </p>
               <p>
                 Our vision is to bring traditional Siddha healthcare closer to everyone through personalized consultation, natural healthcare principles and accessible online services — bridging ancient Tamil medical wisdom with contemporary living.
@@ -646,7 +648,7 @@ export default function Home() {
             <div style={{ position: "relative", borderRadius: "14px", overflow: "hidden", boxShadow: "0 10px 28px rgba(27,60,52,0.12)" }}>
               <img
                 src={images.consultation}
-                alt="Dr. Karthigadevi consulting patient at EVK Siddha Clinic"
+                alt="Dr. E. Karthiga consulting patient at EVK Siddha Clinic"
                 style={{ width: "100%", height: "100%", objectFit: "cover", minHeight: "360px" }}
               />
               <div style={{ position: "absolute", bottom: 0, insetInline: 0, background: "linear-gradient(0deg, rgba(20,44,38,0.9), transparent)", padding: "20px", color: "#fff" }}>
@@ -698,7 +700,7 @@ export default function Home() {
             <div className="award-spotlight-photo">
               <img
                 src={images.awardLeader}
-                alt="Dr. Karthigadevi with S.K.I.N. Awards 2026 Trophy & Certificate"
+                alt="Dr. E. Karthiga with S.K.I.N. Awards 2026 Trophy & Certificate"
               />
             </div>
             <div>
@@ -709,12 +711,119 @@ export default function Home() {
                 Innovative Healthcare Leader Award
               </h3>
               <p className="award-spotlight-org">
-                Presented to <strong>Dr. Karthigadevi (EVK Siddha Clinic)</strong> by Synchronization of Knowledge & Information Network (ISO 9001:2015 Certified Forum) in recognition of clinical innovation, compassionate leadership, and dedicated community wellness.
+                Presented to <strong>Dr. E. Karthiga (EVK Siddha Clinic)</strong> by Synchronization of Knowledge & Information Network (ISO 9001:2015 Certified Forum) in recognition of clinical innovation, compassionate leadership, and dedicated community wellness.
               </p>
               <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap", fontSize: "12px", color: "#bcd9c6" }}>
                 <span>✓ S.K.I.N. Forum ISO 9001:2015 Certified</span>
                 <span>✓ Grand Stage Recognition with Medical Dignitaries</span>
               </div>
+            </div>
+          </div>
+
+          {/* Professional Achievements & Certifications */}
+          <div className="credentials-showcase-box">
+            <div className="credentials-header">
+              <span className="credentials-header-badge">
+                <GraduationCap size={14} /> Academic Excellence & Medical Credentials
+              </span>
+              <h3 className="credentials-title">Professional Achievements & Certifications</h3>
+              <p className="credentials-intro">
+                <strong>Dr. E. Karthiga</strong> has demonstrated strong academic excellence and a continuous commitment to advancing her knowledge in Siddha medicine and traditional healthcare.
+              </p>
+              <p className="credentials-subintro">
+                Her professional journey includes several notable achievements, recognitions, and specialized training programmes:
+              </p>
+            </div>
+
+            <div className="credentials-grid">
+              {/* Pillar 1: Awards & Academic Excellence */}
+              <div className="credential-pillar-card">
+                <div className="credential-pillar-top">
+                  <div className="credential-icon-wrap award-accent">
+                    <Award size={22} />
+                  </div>
+                  <span className="credential-tag">First Rank Honours</span>
+                </div>
+                <h4 className="credential-pillar-title">Awards & Academic Excellence</h4>
+                <ul className="credential-list">
+                  <li>
+                    <CheckCircle2 size={16} className="credential-bullet-icon" />
+                    <span>
+                      Recipient of the prestigious <strong>Jivaka Award</strong> from The Himalaya Drug Company for securing <strong>First Rank</strong> in the final-year B.S.M.S. examination.
+                    </span>
+                  </li>
+                  <li>
+                    <CheckCircle2 size={16} className="credential-bullet-icon" />
+                    <span>
+                      Received a cash award of <strong>₹10,000</strong> in recognition of outstanding academic performance in 2011.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Pillar 2: Professional Training & Certifications */}
+              <div className="credential-pillar-card">
+                <div className="credential-pillar-top">
+                  <div className="credential-icon-wrap train-accent">
+                    <Sparkles size={22} />
+                  </div>
+                  <span className="credential-tag">Specialized Training</span>
+                </div>
+                <h4 className="credential-pillar-title">Professional Training & Certifications</h4>
+                <ul className="credential-list">
+                  <li>
+                    <CheckCircle2 size={16} className="credential-bullet-icon" />
+                    <span>
+                      Completed specialized training in <strong>Panchakarma Techniques</strong> at Rohini Institute of Alternative Medicine, Chennai (2008).
+                    </span>
+                  </li>
+                  <li>
+                    <CheckCircle2 size={16} className="credential-bullet-icon" />
+                    <span>
+                      Participated in a workshop on <strong>Recent Trends in Clinical Microbiology, Antimicrobial Studies and Preparation of Rare Siddha Medicines</strong>, organized by GLORIS BioMed Research Centre (2007).
+                    </span>
+                  </li>
+                  <li>
+                    <CheckCircle2 size={16} className="credential-bullet-icon" />
+                    <span>
+                      Participated in a workshop on <strong>Diabetes Management through Siddha and Yoga</strong>, organized by Arogya Healthcare Pvt. Ltd. in association with S-VYASA (2011).
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Pillar 3: Continuing Medical Education (CME) */}
+              <div className="credential-pillar-card">
+                <div className="credential-pillar-top">
+                  <div className="credential-icon-wrap cme-accent">
+                    <BookOpen size={22} />
+                  </div>
+                  <span className="credential-tag">TN Dr. M.G.R. University</span>
+                </div>
+                <h4 className="credential-pillar-title">Continuing Medical Education (CME)</h4>
+                <p className="credential-sub-label">The Tamil Nadu Dr. M.G.R. Medical University</p>
+                <ul className="credential-list">
+                  <li>
+                    <CheckCircle2 size={16} className="credential-bullet-icon" />
+                    <span><strong>Good Clinical Practice</strong> – January 2011.</span>
+                  </li>
+                  <li>
+                    <CheckCircle2 size={16} className="credential-bullet-icon" />
+                    <span><strong>Pharmacological and Toxicological Studies</strong> – November 2010.</span>
+                  </li>
+                  <li>
+                    <CheckCircle2 size={16} className="credential-bullet-icon" />
+                    <span><strong>Research in Indian Systems of Medicine</strong> – March 2011.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="credentials-dedication-callout">
+              <Leaf size={22} className="dedication-leaf-icon" />
+              <span>
+                “These recognitions and professional development programmes reflect her dedication to clinical knowledge, medical research, patient care, and the preservation of traditional Siddha healthcare practices.”
+              </span>
             </div>
           </div>
         </div>
@@ -762,7 +871,7 @@ export default function Home() {
                 </button>
                 <a
                   className="button button-outline"
-                  href="https://wa.me/916374514716?text=Hello%20Dr.%20Karthigadevi,%20I%20am%20interested%20in%20your%20Wellness%20Tourism%20program"
+                  href="https://wa.me/916374514716?text=Hello%20Dr.%20E.%20Karthiga,%20I%20am%20interested%20in%20your%20Wellness%20Tourism%20program"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -774,10 +883,10 @@ export default function Home() {
             <div className="wellness-hero-image">
               <img
                 src={images.wellnessInternational}
-                alt="Dr. Karthigadevi with international patient - Wellness Tourism"
+                alt="Dr. E. Karthiga with international patient - Wellness Tourism"
               />
               <div className="wellness-photo-caption">
-                <strong>Cross-Cultural Healing:</strong> Dr. Karthigadevi with an international patient in a peaceful garden setting.
+                <strong>Cross-Cultural Healing:</strong> Dr. E. Karthiga with an international patient in a peaceful garden setting.
               </div>
             </div>
           </div>
@@ -864,7 +973,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="heading-note">
-              At EVK Siddha Clinic, we provide personalized Siddha healthcare consultations and treatment guidance under the supervision of Dr. Karthigadevi.
+              At EVK Siddha Clinic, we provide personalized Siddha healthcare consultations and treatment guidance under the supervision of Dr. E. Karthiga.
             </p>
           </div>
 
@@ -927,7 +1036,7 @@ export default function Home() {
                   categoryLabel: "Treatment Scope",
                   title: "EVK Siddha Clinic Official Treatment Scope",
                   subtitle: "Joint Pain, Skin, Respiratory & Women's Care",
-                  description: "Full clinical services breakdown under Dr. Karthigadevi, B.S.M.S., Reg. No.: 3802.",
+                  description: "Full clinical services breakdown under Dr. E. Karthiga, B.S.M.S., Reg. No.: 3802.",
                   src: images.treatmentsPoster,
                   alt: "EVK Siddha Clinic Official Treatments Poster",
                   badge: "Treatments",
@@ -1120,7 +1229,7 @@ export default function Home() {
             <div style={{ height: "100%", minHeight: "340px" }}>
               <img
                 src={images.womenCareBanner}
-                alt="Dr. Karthigadevi - We care for women because I am a woman"
+                alt="Dr. E. Karthiga - We care for women because I am a woman"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </div>
@@ -1132,7 +1241,7 @@ export default function Home() {
                 “We care for women because I am a woman.”
               </h3>
               <p style={{ color: "#54685c", fontSize: "14.5px", lineHeight: "1.7", margin: "0 0 20px" }}>
-                Patients can consult Dr. Karthigadevi to discuss their concerns openly and receive appropriate guidance based on their individual health requirements.
+                Patients can consult Dr. E. Karthiga to discuss their concerns openly and receive appropriate guidance based on their individual health requirements.
               </p>
               <button className="button button-primary" onClick={() => scrollTo("online-consult")}>
                 Consult for Women's Health <ArrowUpRight size={15} />
@@ -1212,7 +1321,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="heading-note" style={{ color: "#c1d9cc" }}>
-              Patients across India and worldwide can connect with Dr. Karthigadevi through seamless online consultations.
+              Patients across India and worldwide can connect with Dr. E. Karthiga through seamless online consultations.
             </p>
           </div>
 
@@ -1259,7 +1368,7 @@ export default function Home() {
           <div className="consult-action-buttons-row">
             <a
               className="consult-action-btn primary"
-              href="https://wa.me/916374514716?text=Hello%20Dr.%20Karthigadevi,%20I%20would%20like%20to%20book%20an%20Online%20Consultation"
+              href="https://wa.me/916374514716?text=Hello%20Dr.%20E.%20Karthiga,%20I%20would%20like%20to%20book%20an%20Online%20Consultation"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1274,7 +1383,7 @@ export default function Home() {
 
             <a
               className="consult-action-btn secondary"
-              href="https://wa.me/916374514716?text=Hello%20Dr.%20Karthigadevi,%20I%20would%20like%20to%20enquire%20about%20Siddha%20Medicines"
+              href="https://wa.me/916374514716?text=Hello%20Dr.%20E.%20Karthiga,%20I%20would%20like%20to%20enquire%20about%20Siddha%20Medicines"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1364,7 +1473,7 @@ export default function Home() {
 
           <div className="gallery-grid">
             <div className="gallery-main">
-              <img src={images.consultation} alt="Dr. Karthigadevi consulting with a patient" />
+              <img src={images.consultation} alt="Dr. E. Karthiga consulting with a patient" />
               <span>Listening is part of the medicine.</span>
             </div>
             <div>
@@ -1523,7 +1632,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="heading-note">
-              Moments from Dr. Karthigadevi's Wellness Tourism initiatives, S.K.I.N. Awards 2026, Temple Landmark, France travel, and clinic life.
+              Moments from Dr. E. Karthiga's Wellness Tourism initiatives, S.K.I.N. Awards 2026, Temple Landmark, France travel, and clinic life.
             </p>
           </div>
 
@@ -1636,7 +1745,7 @@ export default function Home() {
               can be <em>simple.</em>
             </h2>
             <p>
-              Connect with <strong>Dr. Karthigadevi</strong> at EVK Siddha Clinic in Pondicherry, or request personalized online consultations and healthcare guidance from anywhere in India and abroad.
+              Connect with <strong>Dr. E. Karthiga</strong> at EVK Siddha Clinic in Pondicherry, or request personalized online consultations and healthcare guidance from anywhere in India and abroad.
             </p>
 
             {/* Direct Call CTA */}
@@ -1654,7 +1763,7 @@ export default function Home() {
             {/* WhatsApp Consult CTA */}
             <a
               className="contact-cta"
-              href="https://wa.me/916374514716?text=Hello%20Dr.%20Karthigadevi,%20I%20would%20like%20to%20consult%20at%20EVK%20Siddha%20Clinic"
+              href="https://wa.me/916374514716?text=Hello%20Dr.%20E.%20Karthiga,%20I%20would%20like%20to%20consult%20at%20EVK%20Siddha%20Clinic"
               target="_blank"
               rel="noopener noreferrer"
               style={{ background: "#1e4d3f" }}
@@ -1762,12 +1871,12 @@ export default function Home() {
               “EVK Siddha Clinic – Traditionally Redefining Wellness Through Siddha Medicine, Personalized Healthcare, Diet, Yoga and Wellness Tourism.”
             </div>
             <div className="footer-copyright">
-              © {new Date().getFullYear()} EVK Siddha Clinic. 10+ Years of Experience · Providing Siddha healthcare services since 2016. Under Dr. Karthigadevi, B.S.M.S.
+              © {new Date().getFullYear()} EVK Siddha Clinic. 10+ Years of Experience · Providing Siddha healthcare services since 2016. Under Dr. E. Karthiga, B.S.M.S.
             </div>
           </div>
 
           <div className="footer-portrait">
-            <img src={images.hero} alt="Dr. Karthigadevi" />
+            <img src={images.hero} alt="Dr. E. Karthiga" />
           </div>
         </div>
       </footer>
@@ -1776,7 +1885,7 @@ export default function Home() {
       <div className="floating-actions">
         <a
           className="floating-btn whatsapp"
-          href="https://wa.me/916374514716?text=Hello%20Dr.%20Karthigadevi,%20I%20would%20like%20to%20consult%20at%20EVK%20Siddha%20Clinic"
+          href="https://wa.me/916374514716?text=Hello%20Dr.%20E.%20Karthiga,%20I%20would%20like%20to%20consult%20at%20EVK%20Siddha%20Clinic"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"

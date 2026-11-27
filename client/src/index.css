@@ -103,6 +103,8 @@
 .site-nav .container {
   max-width: 1400px;
   padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .top-line-inner {
@@ -220,6 +222,8 @@
   justify-content: space-between;
   height: 72px;
   gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Brand Button & Logo */
@@ -988,6 +992,191 @@
 }
 
 /* ==========================================================================
+   PROFESSIONAL ACHIEVEMENTS & CERTIFICATIONS (ABOUT SECTION)
+   ========================================================================== */
+.credentials-showcase-box {
+  margin-top: 36px;
+  background: #ffffff;
+  border: 1px solid rgba(27, 60, 52, 0.12);
+  border-radius: 16px;
+  padding: 38px 36px 32px;
+  box-shadow: 0 10px 30px rgba(27, 60, 52, 0.05);
+}
+
+.credentials-header {
+  max-width: 820px;
+}
+
+.credentials-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #eff6ee;
+  color: #2e5f20;
+  border: 1px solid rgba(95, 126, 40, 0.25);
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.credentials-title {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 36px);
+  color: #1b3c34;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.credentials-intro {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #3d5045;
+  margin: 0 0 8px;
+}
+
+.credentials-subintro {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #61766a;
+  margin: 0 0 24px;
+  font-weight: 500;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 26px;
+}
+
+.credential-pillar-card {
+  background: #fbfbf7;
+  border: 1px solid rgba(27, 60, 52, 0.1);
+  border-radius: 14px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.credential-pillar-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(27, 60, 52, 0.08);
+  border-color: rgba(95, 126, 40, 0.35);
+}
+
+.credential-pillar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.credential-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.credential-icon-wrap.award-accent {
+  background: #fdf6e2;
+  color: #b45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.credential-icon-wrap.train-accent {
+  background: #eef8f3;
+  color: #166534;
+  border: 1px solid rgba(22, 101, 52, 0.25);
+}
+
+.credential-icon-wrap.cme-accent {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid rgba(29, 78, 216, 0.25);
+}
+
+.credential-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5f7467;
+  background: rgba(27, 60, 52, 0.06);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.credential-pillar-title {
+  font-family: var(--serif);
+  font-size: 19px;
+  color: #1b3c34;
+  line-height: 1.28;
+  margin: 0 0 10px;
+}
+
+.credential-sub-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #556c5e;
+  margin: -4px 0 12px;
+  line-height: 1.4;
+}
+
+.credential-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.credential-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #384e43;
+}
+
+.credential-bullet-icon {
+  color: #5f7e28;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.credentials-dedication-callout {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #f2f7ec 0%, #eaf3e1 100%);
+  border: 1px solid rgba(95, 126, 40, 0.25);
+  border-radius: 12px;
+  padding: 18px 22px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #264332;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.dedication-leaf-icon {
+  color: #5f7e28;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
    SECTION 02: THIRUKKURAL PHILOSOPHY
    ========================================================================== */
 .kural-section {
@@ -1006,14 +1195,14 @@
 .section-heading-row h2 {
   font-family: var(--serif);
   font-size: clamp(34px, 4vw, 54px);
-  color: #1b3c34;
+  color: #1b3c34 !important;
   line-height: 1.12;
   margin: 0;
   letter-spacing: -0.02em;
 }
 
 .section-heading-row h2 em {
-  color: #5f7e28;
+  color: #5f7e28 !important;
   font-style: italic;
 }
 
@@ -1025,15 +1214,36 @@
   margin: 0;
 }
 
+/* Explicit Light Section Heading Protection */
+.wellness-section .section-heading-row h2,
+.services-section .section-heading-row h2,
+.natural-approach-section .section-heading-row h2,
+.focus-section .section-heading-row h2,
+.testimonials-section .section-heading-row h2,
+.gallery-showcase-section .section-heading-row h2,
+.about-section .section-heading-row h2 {
+  color: #1b3c34 !important;
+}
+
+.wellness-section .section-heading-row h2 em,
+.services-section .section-heading-row h2 em,
+.natural-approach-section .section-heading-row h2 em,
+.focus-section .section-heading-row h2 em,
+.testimonials-section .section-heading-row h2 em,
+.gallery-showcase-section .section-heading-row h2 em,
+.about-section .section-heading-row h2 em {
+  color: #5f7e28 !important;
+}
+
 /* Dark Section Variant (Thirukkural & Online Consult) */
 .kural-section .section-heading-row h2,
 .online-consult-section .section-heading-row h2 {
-  color: #f3f7ea;
+  color: #f3f7ea !important;
 }
 
 .kural-section .section-heading-row h2 em,
 .online-consult-section .section-heading-row h2 em {
-  color: #d6fa75;
+  color: #d6fa75 !important;
 }
 
 .kural-section .heading-note,
@@ -2309,7 +2519,7 @@
 /* ==========================================================================
    RESPONSIVENESS & MEDIA QUERIES
    ========================================================================== */
-@media (max-width: 1320px) {
+@media (max-width: 1380px) {
   .topline-address-snippet {
     display: none;
   }
@@ -2318,7 +2528,7 @@
   }
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1280px) {
   .nav-phone-pill span {
     display: none;
   }
@@ -2327,12 +2537,12 @@
     border-radius: 50%;
   }
   .desktop-nav button {
-    padding: 6px 8px;
+    padding: 6px 7px;
     font-size: 12px;
   }
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1160px) {
   .desktop-nav {
     display: none;
   }
@@ -2344,6 +2554,9 @@
   .nav-book-btn {
     display: inline-flex;
   }
+}
+
+@media (max-width: 1120px) {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -2378,6 +2591,14 @@
   .award-spotlight-card {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+  .credentials-showcase-box {
+    padding: 28px 24px 24px;
+    margin-top: 28px;
+  }
+  .credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
   .history-metrics-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2614,6 +2835,34 @@
   .history-metrics-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+  .credentials-showcase-box {
+    padding: 22px 16px 20px;
+    border-radius: 12px;
+    margin-top: 24px;
+  }
+  .credentials-title {
+    font-size: 22px;
+  }
+  .credentials-intro {
+    font-size: 14px;
+  }
+  .credentials-subintro {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .credential-pillar-card {
+    padding: 18px 16px;
+  }
+  .credential-pillar-title {
+    font-size: 17px;
+  }
+  .credentials-dedication-callout {
+    padding: 16px 14px;
+    font-size: 13px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
   .kural-card {
     padding: 22px 18px;
