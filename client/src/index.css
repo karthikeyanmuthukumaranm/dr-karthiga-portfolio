@@ -575,19 +575,40 @@
   border-radius: 1px;
 }
 
-.hero-copy h1 {
+.hero-copy h1,
+.hero-heading {
   margin: 20px 0 0;
-  color: #1b3c34;
-  font-family: var(--serif);
-  font-weight: 400;
-  letter-spacing: -.03em;
-  line-height: 1.04;
-  font-size: clamp(40px, 4.8vw, 68px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.hero-copy h1 em, h2 em {
+.hero-primary-motto {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(36px, 5.2vw, 68px);
+  font-weight: 800;
+  color: #14352c;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  display: block;
+}
+
+.hero-secondary-sub {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3.4vw, 42px);
+  font-weight: 400;
+  color: #3b5247;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  display: block;
+}
+
+.hero-copy h1 em,
+.hero-secondary-sub em,
+h2 em {
   color: #5f7e28;
   font-style: italic;
+  font-weight: 500;
 }
 
 .hero-intro {
@@ -1174,6 +1195,406 @@
 .dedication-leaf-icon {
   color: #5f7e28;
   flex-shrink: 0;
+}
+
+/* ==========================================================================
+   ACHIEVEMENTS EXPRESS: ANIMATED TRAIN & RAILWAY TRACK
+   ========================================================================== */
+.achievements-train-container {
+  margin-top: 32px;
+  background: #112822;
+  border: 1px solid rgba(172, 215, 51, 0.25);
+  border-radius: 16px;
+  padding: 26px 24px 20px;
+  box-shadow: 0 16px 40px rgba(10, 24, 20, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.train-track-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 14px;
+}
+
+.train-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.train-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(172, 215, 51, 0.16);
+  color: #d8fa75;
+  border: 1px solid rgba(172, 215, 51, 0.35);
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.train-icon-animated {
+  animation: trainJiggle 1.8s infinite ease-in-out;
+}
+
+@keyframes trainJiggle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+.train-track-heading {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: #f3f7ea;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.train-track-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: #a4beae;
+  font-weight: 500;
+}
+
+.train-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #acd733;
+  box-shadow: 0 0 0 3px rgba(172, 215, 51, 0.25);
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+.train-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 24px 0 10px;
+  cursor: grab;
+  mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+}
+
+.railway-catenary-line {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(172, 215, 51, 0.2);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.train-moving-wrapper {
+  display: flex;
+  align-items: flex-end;
+  width: max-content;
+  animation: trainExpressMove 36s linear infinite;
+  will-change: transform;
+}
+
+.train-moving-wrapper:hover,
+.train-moving-wrapper:active {
+  animation-play-state: paused;
+}
+
+@keyframes trainExpressMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Locomotive Engine */
+.train-engine-car {
+  position: relative;
+  width: 170px;
+  height: 176px;
+  background: linear-gradient(180deg, #1f4d3e 0%, #112d24 100%);
+  border: 1px solid rgba(172, 215, 51, 0.45);
+  border-radius: 14px 28px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  flex-shrink: 0;
+}
+
+.engine-smoke-wrap {
+  position: absolute;
+  top: -24px;
+  left: 22px;
+  display: flex;
+  gap: 6px;
+}
+
+.smoke-puff {
+  width: 10px;
+  height: 10px;
+  background: rgba(220, 240, 210, 0.45);
+  border-radius: 50%;
+  animation: smokeRise 2s infinite ease-out;
+}
+
+.smoke-puff.puff-2 {
+  animation-delay: 0.6s;
+  width: 13px;
+  height: 13px;
+}
+
+.smoke-puff.puff-3 {
+  animation-delay: 1.2s;
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes smokeRise {
+  0% { transform: translate(0, 0) scale(0.6); opacity: 0.8; }
+  100% { transform: translate(-30px, -24px) scale(1.6); opacity: 0; }
+}
+
+.engine-headlight {
+  position: absolute;
+  right: -5px;
+  bottom: 34px;
+  width: 10px;
+  height: 10px;
+  background: #fef08a;
+  border-radius: 50%;
+  box-shadow: 0 0 16px 6px rgba(254, 240, 138, 0.9), 14px 0 24px 10px rgba(254, 240, 138, 0.5);
+  animation: headlightGlow 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes headlightGlow {
+  0% { opacity: 0.85; filter: brightness(1); }
+  100% { opacity: 1; filter: brightness(1.4); }
+}
+
+.engine-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.engine-icon {
+  color: #acd733;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.engine-label {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #edf6e0;
+  text-transform: uppercase;
+}
+
+/* Coupler between cars */
+.train-coupler {
+  width: 16px;
+  height: 6px;
+  background: #4a6356;
+  border-radius: 2px;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Milestone Carriages */
+.train-carriage-car {
+  width: 260px;
+  height: 176px;
+  background: linear-gradient(180deg, #1a3d33 0%, #153229 100%);
+  border: 1px solid rgba(220, 240, 210, 0.18);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 14px 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+  position: relative;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.train-carriage-car:hover {
+  transform: translateY(-4px);
+  border-color: rgba(172, 215, 51, 0.6);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.4);
+}
+
+.train-carriage-car.carriage-highlight {
+  background: linear-gradient(180deg, #234d3f 0%, #17382d 100%);
+  border: 1px solid rgba(172, 215, 51, 0.5);
+}
+
+.carriage-roof {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 6px;
+}
+
+.carriage-coach-no {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #9cbca7;
+  text-transform: uppercase;
+}
+
+.carriage-year-badge {
+  font-size: 11px;
+  font-weight: 800;
+  color: #112822;
+  background: #acd733;
+  padding: 1px 7px;
+  border-radius: 99px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.carriage-window-bay {
+  display: flex;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.carriage-window {
+  flex: 1;
+  height: 6px;
+  background: rgba(254, 240, 138, 0.22);
+  border-radius: 2px;
+  border: 1px solid rgba(254, 240, 138, 0.35);
+}
+
+.carriage-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-height: 0;
+}
+
+.carriage-tag {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #d6f28f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carriage-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.carriage-institution {
+  font-size: 11px;
+  color: #bdd2c5;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carriage-extra {
+  font-size: 10px;
+  color: #8faea0;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Wheels */
+.train-wheelset {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 10px 0;
+}
+
+.train-wheel {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1b2f28;
+  border: 2px solid #8ba898;
+  box-shadow: inset 0 0 0 2px #11221c;
+  animation: wheelRoll 1s linear infinite;
+}
+
+@keyframes wheelRoll {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Railway Physical Tracks */
+.railway-physical-track {
+  width: 100%;
+  margin-top: 2px;
+}
+
+.rail-steel-top {
+  height: 3px;
+  background: linear-gradient(90deg, #91aa9d 0%, #688274 50%, #91aa9d 100%);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+.rail-sleepers-pattern {
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    #2c4037 0px,
+    #2c4037 8px,
+    transparent 8px,
+    transparent 20px
+  );
+  border-left: 4px solid #2c4037;
+  border-right: 4px solid #2c4037;
+}
+
+.rail-steel-bottom {
+  height: 2px;
+  background: #42584c;
+  border-radius: 1px;
+}
+
+.train-instruction-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: #a0baa9;
+  margin: 12px 0 0;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -2600,6 +3021,15 @@
     grid-template-columns: 1fr;
     gap: 18px;
   }
+  .holistic-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .womens-stages-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .foundations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .history-metrics-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -2864,6 +3294,68 @@
     text-align: center;
     gap: 10px;
   }
+  .hero-primary-motto {
+    font-size: clamp(30px, 8vw, 42px);
+    line-height: 1.1;
+  }
+  .hero-secondary-sub {
+    font-size: clamp(20px, 5.5vw, 28px);
+    line-height: 1.2;
+  }
+  .achievements-train-container {
+    padding: 20px 14px 16px;
+    border-radius: 14px;
+    margin-top: 24px;
+  }
+  .train-track-heading {
+    font-size: 17px;
+  }
+  .train-carriage-car {
+    width: 220px;
+    height: 165px;
+    padding: 10px 12px;
+  }
+  .train-engine-car {
+    width: 145px;
+    height: 165px;
+  }
+  .holistic-wellness-showcase {
+    padding: 26px 18px;
+    border-radius: 14px;
+    margin-top: 32px;
+  }
+  .holistic-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .womens-stages-card {
+    padding: 22px 16px;
+  }
+  .womens-stages-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .daily-foundations-box {
+    padding: 22px 16px;
+  }
+  .foundations-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .provider-tracking-callout {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 22px 18px;
+    gap: 18px;
+  }
+  .provider-callout-action {
+    width: 100%;
+  }
+  .provider-callout-action .button,
+  .provider-wa-btn {
+    width: 100%;
+    justify-content: center;
+  }
   .kural-card {
     padding: 22px 18px;
   }
@@ -2893,8 +3385,22 @@
   .brand-name {
     font-size: 13.5px;
   }
-  .hero-copy h1 {
-    font-size: clamp(26px, 7.5vw, 32px);
+  .hero-primary-motto {
+    font-size: clamp(26px, 8vw, 34px);
+  }
+  .hero-secondary-sub {
+    font-size: clamp(18px, 5.5vw, 22px);
+  }
+  .train-track-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .holistic-title {
+    font-size: 23px;
+  }
+  .holistic-lead-desc {
+    font-size: 17px;
   }
   .hero-cta-row {
     flex-direction: column;
@@ -3064,6 +3570,407 @@
   color: #e5ece6;
   font-size: 13px;
   line-height: 1.6;
+}
+
+/* ==========================================================================
+   HOLISTIC WELLNESS, NATURAL REMEDIES & HEALTHY LIVING SHOWCASE
+   ========================================================================== */
+.holistic-wellness-showcase {
+  margin-top: 48px;
+  background: #ffffff;
+  border: 1px solid rgba(27, 60, 52, 0.12);
+  border-radius: 18px;
+  padding: 44px 40px;
+  box-shadow: 0 14px 40px rgba(27, 60, 52, 0.05);
+}
+
+.holistic-showcase-header {
+  max-width: 820px;
+  margin-bottom: 36px;
+}
+
+.holistic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #f0f7ea;
+  color: #2b5c1c;
+  border: 1px solid rgba(95, 126, 40, 0.3);
+  padding: 5px 13px;
+  border-radius: 99px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.holistic-title {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.4vw, 38px);
+  color: #1b3c34;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.holistic-lead-desc {
+  font-family: var(--serif);
+  font-size: clamp(19px, 2.2vw, 24px);
+  font-style: italic;
+  color: #5f7e28;
+  margin: 0 0 10px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.holistic-intro-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #4b6154;
+  margin: 0;
+}
+
+/* Sub-Points: Core Health Pillars Grid */
+.holistic-pillars-section {
+  margin-bottom: 38px;
+}
+
+.holistic-subheading-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.holistic-mini-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #5f7e28;
+  background: rgba(95, 126, 40, 0.1);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.holistic-section-label {
+  font-family: var(--serif);
+  font-size: 21px;
+  color: #1b3c34;
+  margin: 0;
+}
+
+.holistic-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.holistic-pillar-card {
+  background: #fbfbf7;
+  border: 1px solid rgba(27, 60, 52, 0.09);
+  border-radius: 14px;
+  padding: 22px 20px;
+  transition: all .22s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.holistic-pillar-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(27, 60, 52, 0.08);
+  border-color: rgba(95, 126, 40, 0.4);
+}
+
+.holistic-pillar-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+.holistic-pillar-card h5 {
+  font-family: var(--serif);
+  font-size: 17.5px;
+  color: #1b3c34;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+.holistic-pillar-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #55695d;
+  margin: 0;
+}
+
+/* Women's Stages Card */
+.womens-stages-card {
+  background: linear-gradient(135deg, #fdf6f7 0%, #f7f0ed 100%);
+  border: 1px solid rgba(190, 24, 93, 0.16);
+  border-radius: 16px;
+  padding: 32px 30px;
+  margin-bottom: 36px;
+}
+
+.womens-stages-header {
+  margin-bottom: 24px;
+}
+
+.womens-stages-badge {
+  display: inline-block;
+  background: #fce7f3;
+  color: #be185d;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 99px;
+  margin-bottom: 10px;
+}
+
+.womens-stages-header h4 {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: #1b3c34;
+  margin: 0 0 6px;
+}
+
+.womens-stages-header p {
+  font-size: 14px;
+  color: #634b52;
+  margin: 0;
+}
+
+.womens-stages-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.stage-pill-card {
+  background: #ffffff;
+  border: 1px solid rgba(190, 24, 93, 0.14);
+  border-radius: 12px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.stage-pill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(190, 24, 93, 0.1);
+  border-color: #be185d;
+}
+
+.stage-header-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.stage-step-tag {
+  font-size: 10px;
+  font-weight: 800;
+  color: #be185d;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.stage-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f472b6;
+}
+
+.stage-pill-card h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b3c34;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.stage-pill-card p {
+  font-size: 12px;
+  color: #617367;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Daily Foundations Box */
+.daily-foundations-box {
+  background: #f6f9f3;
+  border: 1px solid rgba(95, 126, 40, 0.22);
+  border-radius: 16px;
+  padding: 32px 30px;
+  margin-bottom: 34px;
+}
+
+.foundations-header {
+  margin-bottom: 22px;
+}
+
+.foundations-badge {
+  display: inline-block;
+  background: #eef6e6;
+  color: #3b6b22;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 99px;
+  margin-bottom: 8px;
+}
+
+.foundations-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: #1b3c34;
+  margin: 0 0 6px;
+}
+
+.foundations-subtitle {
+  font-size: 14px;
+  color: #556c5e;
+  margin: 0;
+}
+
+.foundations-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.foundation-item {
+  background: #ffffff;
+  border: 1px solid rgba(27, 60, 52, 0.08);
+  border-radius: 12px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all .2s ease;
+}
+
+.foundation-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(27, 60, 52, 0.06);
+  border-color: #5f7e28;
+}
+
+.foundation-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #f1f7ec;
+  color: #5f7e28;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foundation-item-text h6 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1b3c34;
+  margin: 0 0 4px;
+}
+
+.foundation-item-text p {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #5e7166;
+  margin: 0;
+}
+
+/* Provider Clinical Partnership Callout */
+.provider-tracking-callout {
+  background: linear-gradient(135deg, #1b3c34 0%, #132b25 100%);
+  border: 1px solid rgba(172, 215, 51, 0.35);
+  border-radius: 14px;
+  padding: 28px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  box-shadow: 0 10px 28px rgba(10, 24, 20, 0.2);
+}
+
+.provider-callout-content {
+  flex: 1;
+}
+
+.provider-badge-row {
+  margin-bottom: 8px;
+}
+
+.provider-alert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(172, 215, 51, 0.18);
+  color: #d6fa75;
+  border: 1px solid rgba(172, 215, 51, 0.4);
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.provider-callout-content h4 {
+  font-family: var(--serif);
+  font-size: 21px;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.provider-callout-content p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #cde1d5;
+  margin: 0;
+}
+
+.provider-callout-action {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.provider-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #edf6e0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.provider-wa-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: #acd733;
 }
 
 /* ==========================================================================

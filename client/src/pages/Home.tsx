@@ -28,6 +28,7 @@ import {
   Sparkles,
   Star,
   Stethoscope,
+  Train,
   Users,
   X,
 } from "lucide-react";
@@ -62,6 +63,76 @@ const images = {
   templeGopuram: "/images/varadaraja-perumal-temple-gopuram.jpg",
   templeClinicView: "/images/varadaraja-perumal-temple-clinic-view.jpg",
 };
+
+const trainMilestones = [
+  {
+    year: "2007",
+    coach: "COACH 01",
+    category: "Microbiology & Rare Medicines",
+    title: "Rare Siddha Medicines Workshop",
+    institution: "GLORIS BioMed Research Centre",
+    extra: "Clinical Microbiology & Antimicrobial Studies",
+  },
+  {
+    year: "2008",
+    coach: "COACH 02",
+    category: "Classical Training",
+    title: "Panchakarma Techniques Certification",
+    institution: "Rohini Institute of Alternative Medicine, Chennai",
+    extra: "Classical Detox & Body Purification Mastery",
+  },
+  {
+    year: "2010",
+    coach: "COACH 03",
+    category: "CME Certification",
+    title: "Pharmacological & Toxicological Studies",
+    institution: "The Tamil Nadu Dr. M.G.R. Medical University",
+    extra: "Safety, Efficacy & Phytotherapy Protocols",
+  },
+  {
+    year: "2011",
+    coach: "COACH 04",
+    category: "First Rank Honours",
+    title: "Jivaka Award — First Rank in B.S.M.S.",
+    institution: "The Himalaya Drug Company",
+    extra: "Academic Excellence & ₹10,000 Cash Prize",
+    highlight: true,
+  },
+  {
+    year: "2011",
+    coach: "COACH 05",
+    category: "CME Certification",
+    title: "Good Clinical Practice & ISM Research",
+    institution: "The Tamil Nadu Dr. M.G.R. Medical University",
+    extra: "Ethical Standards in Indian Medicine Research",
+  },
+  {
+    year: "2011",
+    coach: "COACH 06",
+    category: "Specialized Management",
+    title: "Diabetes Management via Siddha & Yoga",
+    institution: "Arogya Healthcare & S-VYASA",
+    extra: "Holistic Glycemic & Lifestyle Integration",
+  },
+  {
+    year: "2016",
+    coach: "COACH 07",
+    category: "Healthcare Milestone",
+    title: "EVK Siddha Clinic Established",
+    institution: "Heritage Town, Puducherry",
+    extra: "10+ Years Dedicated Patient Care",
+    highlight: true,
+  },
+  {
+    year: "2026",
+    coach: "COACH 08",
+    category: "Leadership Award",
+    title: "Innovative Healthcare Leader Award",
+    institution: "S.K.I.N. Awards (ISO 9001:2015 Forum)",
+    extra: "State Felicitation with Medical Dignitaries",
+    highlight: true,
+  },
+];
 
 interface GalleryItem {
   id: string;
@@ -537,10 +608,11 @@ export default function Home() {
             <p className="eyebrow">
               <span className="eyebrow-line" /> Siddha Physician · Puducherry | சித்த மருத்துவமனை
             </p>
-            <h1>
-              Care rooted in <em>tradition.</em>
-              <br />
-              Traditionally Redefining.
+            <h1 className="hero-heading">
+              <span className="hero-primary-motto">Traditionally Redefining.</span>
+              <span className="hero-secondary-sub">
+                Care rooted in <em>tradition.</em>
+              </span>
             </h1>
             <p className="hero-intro">
               <strong>EVK Siddha Clinic</strong> – Traditionally Redefining Wellness Through Siddha Medicine, Personalized Healthcare, Diet, Yoga and Wellness Tourism. Under the supervision of <strong>Dr. E. Karthiga, B.S.M.S.</strong> (Siddha Physician, Reg. No.: 3802).
@@ -825,6 +897,134 @@ export default function Home() {
                 “These recognitions and professional development programmes reflect her dedication to clinical knowledge, medical research, patient care, and the preservation of traditional Siddha healthcare practices.”
               </span>
             </div>
+
+            {/* Animated Milestone Train Track */}
+            <div className="achievements-train-container">
+              <div className="train-track-header">
+                <div className="train-header-left">
+                  <span className="train-live-badge">
+                    <Train size={15} className="train-icon-animated" /> Career Milestones Express
+                  </span>
+                  <h4 className="train-track-heading">The Journey of Dedication & Excellence</h4>
+                </div>
+                <div className="train-track-legend">
+                  <span className="train-pulse-dot" /> Continuous Academic & Clinical Track (2007 – 2026)
+                </div>
+              </div>
+
+              <div className="train-viewport">
+                {/* Overhead Wire / Catenary */}
+                <div className="railway-catenary-line" />
+
+                {/* Moving Train Express (Infinite Seamless Loop, Pauses on Hover/Touch) */}
+                <div className="train-moving-wrapper">
+                  {/* Locomotive Engine */}
+                  <div className="train-engine-car">
+                    <div className="engine-smoke-wrap">
+                      <span className="smoke-puff puff-1" />
+                      <span className="smoke-puff puff-2" />
+                      <span className="smoke-puff puff-3" />
+                    </div>
+                    <div className="engine-body">
+                      <div className="engine-headlight" />
+                      <Train size={28} className="engine-icon" />
+                      <div className="engine-label">EVK EXPRESS</div>
+                    </div>
+                    <div className="train-wheelset">
+                      <span className="train-wheel wheel-left" />
+                      <span className="train-wheel wheel-mid" />
+                      <span className="train-wheel wheel-right" />
+                    </div>
+                  </div>
+
+                  <div className="train-coupler" />
+
+                  {/* Milestone Carriages */}
+                  {trainMilestones.map((milestone, idx) => (
+                    <div key={`m-${idx}`} className={`train-carriage-car ${milestone.highlight ? "carriage-highlight" : ""}`}>
+                      <div className="carriage-roof">
+                        <span className="carriage-coach-no">{milestone.coach}</span>
+                        <span className="carriage-year-badge">{milestone.year}</span>
+                      </div>
+                      <div className="carriage-window-bay">
+                        <span className="carriage-window" />
+                        <span className="carriage-window" />
+                        <span className="carriage-window" />
+                      </div>
+                      <div className="carriage-content">
+                        <span className="carriage-tag">{milestone.category}</span>
+                        <h5 className="carriage-title">{milestone.title}</h5>
+                        <p className="carriage-institution">{milestone.institution}</p>
+                        {milestone.extra && <span className="carriage-extra">{milestone.extra}</span>}
+                      </div>
+                      <div className="train-wheelset">
+                        <span className="train-wheel" />
+                        <span className="train-wheel" />
+                      </div>
+                      <div className="train-coupler" />
+                    </div>
+                  ))}
+
+                  {/* Duplicate Set for Infinite Marquee */}
+                  <div className="train-engine-car" aria-hidden="true">
+                    <div className="engine-smoke-wrap">
+                      <span className="smoke-puff puff-1" />
+                      <span className="smoke-puff puff-2" />
+                      <span className="smoke-puff puff-3" />
+                    </div>
+                    <div className="engine-body">
+                      <div className="engine-headlight" />
+                      <Train size={28} className="engine-icon" />
+                      <div className="engine-label">EVK EXPRESS</div>
+                    </div>
+                    <div className="train-wheelset">
+                      <span className="train-wheel wheel-left" />
+                      <span className="train-wheel wheel-mid" />
+                      <span className="train-wheel wheel-right" />
+                    </div>
+                  </div>
+
+                  <div className="train-coupler" aria-hidden="true" />
+
+                  {trainMilestones.map((milestone, idx) => (
+                    <div key={`m-dup-${idx}`} className={`train-carriage-car ${milestone.highlight ? "carriage-highlight" : ""}`} aria-hidden="true">
+                      <div className="carriage-roof">
+                        <span className="carriage-coach-no">{milestone.coach}</span>
+                        <span className="carriage-year-badge">{milestone.year}</span>
+                      </div>
+                      <div className="carriage-window-bay">
+                        <span className="carriage-window" />
+                        <span className="carriage-window" />
+                        <span className="carriage-window" />
+                      </div>
+                      <div className="carriage-content">
+                        <span className="carriage-tag">{milestone.category}</span>
+                        <h5 className="carriage-title">{milestone.title}</h5>
+                        <p className="carriage-institution">{milestone.institution}</p>
+                        {milestone.extra && <span className="carriage-extra">{milestone.extra}</span>}
+                      </div>
+                      <div className="train-wheelset">
+                        <span className="train-wheel" />
+                        <span className="train-wheel" />
+                      </div>
+                      <div className="train-coupler" />
+                    </div>
+                  ))}
+                </div>
+
+                {/* The Physical Railway Tracks */}
+                <div className="railway-physical-track">
+                  <div className="rail-steel-top" />
+                  <div className="rail-sleepers-pattern" />
+                  <div className="rail-steel-bottom" />
+                </div>
+              </div>
+
+              <div className="train-instruction-note">
+                <Sparkles size={13} style={{ color: "#5f7e28" }} />
+                <span>Hover over or touch any train coach to pause the milestones express</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -949,6 +1149,230 @@ export default function Home() {
               <p>
                 We also welcome enquiries from international patients. Patients living in other countries can consult our doctor online and receive appropriate healthcare guidance based on their health concerns and individual circumstances.
               </p>
+            </div>
+          </div>
+
+          {/* Holistic Wellness, Natural Remedies & Healthy Living Showcase */}
+          <div className="holistic-wellness-showcase">
+            <div className="holistic-showcase-header">
+              <span className="holistic-badge">
+                <Sparkles size={14} /> Comprehensive Well-Being Framework
+              </span>
+              <h3 className="holistic-title">Holistic Wellness, Natural Remedies & Healthy Living</h3>
+              <p className="holistic-lead-desc">
+                “Holistic wellness is the future of care.”
+              </p>
+              <p className="holistic-intro-text">
+                At EVK Siddha Clinic, <strong>Dr. E. Karthiga</strong> bridges classical Siddha medicine with progressive holistic healthcare principles — addressing the whole individual across physical, nutritional, and emotional dimensions.
+              </p>
+            </div>
+
+            {/* Sub-Points: Core Health Pillars */}
+            <div className="holistic-pillars-section">
+              <div className="holistic-subheading-wrap">
+                <span className="holistic-mini-tag">Core Dimensions</span>
+                <h4 className="holistic-section-label">
+                  Life Stage Care & Wellness Pillars
+                </h4>
+              </div>
+              <div className="holistic-pillars-grid">
+                <div className="holistic-pillar-card">
+                  <div className="holistic-pillar-icon" style={{ background: "#fef3c7", color: "#b45309" }}>
+                    <Heart size={20} />
+                  </div>
+                  <h5>Adolescent Care</h5>
+                  <p>Gentle guidance, hormonal stability, nutritional grounding, and emotional resilience for youth in formative growth years.</p>
+                </div>
+
+                <div className="holistic-pillar-card">
+                  <div className="holistic-pillar-icon" style={{ background: "#ecfdf5", color: "#047857" }}>
+                    <ShieldCheck size={20} />
+                  </div>
+                  <h5>Reproductive Health Management</h5>
+                  <p>Natural menstrual rhythm regulation, uterine rejuvenation, preconception support, and individualized Siddha fertility guidance.</p>
+                </div>
+
+                <div className="holistic-pillar-card">
+                  <div className="holistic-pillar-icon" style={{ background: "#f5f3ff", color: "#6d28d9" }}>
+                    <Activity size={20} />
+                  </div>
+                  <h5>Mid-Life Menopause Transition Support</h5>
+                  <p>Compassionate care easing thermoregulation, hormonal mood shifts, bone density maintenance, and vitality preservation.</p>
+                </div>
+
+                <div className="holistic-pillar-card">
+                  <div className="holistic-pillar-icon" style={{ background: "#eff6ff", color: "#1d4ed8" }}>
+                    <Stethoscope size={20} />
+                  </div>
+                  <h5>Physical Wellness</h5>
+                  <p>Daily stamina, joint flexibility, musculoskeletal regeneration, and immune protection through proven Siddha regimens.</p>
+                </div>
+
+                <div className="holistic-pillar-card">
+                  <div className="holistic-pillar-icon" style={{ background: "#f0fdf4", color: "#15803d" }}>
+                    <Apple size={20} />
+                  </div>
+                  <h5>Nutritional Health</h5>
+                  <p>Bio-individual food choices, metabolic fire (Jatharagni) balancing, digestive gut harmony, and traditional nutritional support.</p>
+                </div>
+
+                <div className="holistic-pillar-card">
+                  <div className="holistic-pillar-icon" style={{ background: "#fdf2f8", color: "#be185d" }}>
+                    <Users size={20} />
+                  </div>
+                  <h5>Emotional Well-Being</h5>
+                  <p>Harmonizing mind and body through rhythmic breathing (pranayama), calming adaptogenic herbs, and mindful living.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Women's Health Wellness Across Biological Phases */}
+            <div className="womens-stages-card">
+              <div className="womens-stages-header">
+                <span className="womens-stages-badge">Women’s Health & Wellness</span>
+                <h4>Specialized Guidance Across Every Biological Phase</h4>
+                <p>Personalized Siddha consultations tailored to a woman’s evolving physiological and emotional needs.</p>
+              </div>
+
+              <div className="womens-stages-grid">
+                <div className="stage-pill-card">
+                  <div className="stage-header-line">
+                    <span className="stage-step-tag">Phase 01</span>
+                    <span className="stage-dot" />
+                  </div>
+                  <h5>PCOS / PCOD Care</h5>
+                  <p>Root-cause metabolic balancing, insulin sensitivity, ovulatory support, and natural cycle restoration.</p>
+                </div>
+
+                <div className="stage-pill-card">
+                  <div className="stage-header-line">
+                    <span className="stage-step-tag">Phase 02</span>
+                    <span className="stage-dot" />
+                  </div>
+                  <h5>Postpartum Care (பிரசவ நலம்)</h5>
+                  <p>Restorative herbal lehyams, pelvic tone recovery, healthy lactation nourishment, and maternal convalescence.</p>
+                </div>
+
+                <div className="stage-pill-card">
+                  <div className="stage-header-line">
+                    <span className="stage-step-tag">Phase 03</span>
+                    <span className="stage-dot" />
+                  </div>
+                  <h5>Perimenopause Care</h5>
+                  <p>Managing cycle transitions, hot flashes, sleep irregularities, and mood equilibrium with gentle Siddha remedies.</p>
+                </div>
+
+                <div className="stage-pill-card">
+                  <div className="stage-header-line">
+                    <span className="stage-step-tag">Phase 04</span>
+                    <span className="stage-dot" />
+                  </div>
+                  <h5>Menopause Support</h5>
+                  <p>Natural thermal regulation, bone density support, cardiovascular protection, and sustained inner strength.</p>
+                </div>
+
+                <div className="stage-pill-card">
+                  <div className="stage-header-line">
+                    <span className="stage-step-tag">Phase 05</span>
+                    <span className="stage-dot" />
+                  </div>
+                  <h5>Post-Menopause Wellness</h5>
+                  <p>Graceful healthy aging, joint lubrication, cognitive agility, and long-term vitality through herbal nourishment.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Daily Foundations: 5 Core Practices */}
+            <div className="daily-foundations-box">
+              <div className="foundations-header">
+                <span className="foundations-badge">Daily Lifestyle Regimen</span>
+                <h4 className="foundations-title">
+                  Five Core Foundations of Holistic Health
+                </h4>
+                <p className="foundations-subtitle">
+                  Simple, empowering daily disciplines recommended by Dr. E. Karthiga to maintain sustained physical and mental equilibrium:
+                </p>
+              </div>
+
+              <div className="foundations-grid">
+                <div className="foundation-item">
+                  <div className="foundation-icon-box">
+                    <Clock3 size={20} />
+                  </div>
+                  <div className="foundation-item-text">
+                    <h6>Rest and Sleep</h6>
+                    <p>Circadian rhythm alignment, 7–8 hours of sound sleep, and nightly nervous system unwinding.</p>
+                  </div>
+                </div>
+
+                <div className="foundation-item">
+                  <div className="foundation-icon-box">
+                    <Apple size={20} />
+                  </div>
+                  <div className="foundation-item-text">
+                    <h6>Balanced Nutrition</h6>
+                    <p>Seasonal, freshly prepared meals, digestive spices, and constitutional food charts.</p>
+                  </div>
+                </div>
+
+                <div className="foundation-item">
+                  <div className="foundation-icon-box">
+                    <Activity size={20} />
+                  </div>
+                  <div className="foundation-item-text">
+                    <h6>Gentle Exercise</h6>
+                    <p>Daily yogasanas, morning brisk walks, and mindful stretches suited to individual constitution.</p>
+                  </div>
+                </div>
+
+                <div className="foundation-item">
+                  <div className="foundation-icon-box">
+                    <Sparkles size={20} />
+                  </div>
+                  <div className="foundation-item-text">
+                    <h6>Personal Hygiene</h6>
+                    <p>Classical Siddha oil baths (எண்ணெய் குளியல்), natural detox practices, and sensory hygiene.</p>
+                  </div>
+                </div>
+
+                <div className="foundation-item">
+                  <div className="foundation-icon-box">
+                    <Package size={20} />
+                  </div>
+                  <div className="foundation-item-text">
+                    <h6>Nutrition + Herbal Supplements</h6>
+                    <p>Doctor-supervised Siddha churnams, herbal tonics, and food-based micro-nutrients when indicated.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Provider Clinical Partnership Callout */}
+            <div className="provider-tracking-callout">
+              <div className="provider-callout-content">
+                <div className="provider-badge-row">
+                  <span className="provider-alert-badge">
+                    <ShieldCheck size={14} /> Clinical Partnership Guidance
+                  </span>
+                </div>
+                <h4>Track Symptoms and Diseases with Your Provider</h4>
+                <p>
+                  Effective healing is an active partnership between you and your doctor. Keep notes on symptom severity, dietary reactions, sleep quality, and monthly cycle patterns. Discussing these records during consultations with <strong>Dr. E. Karthiga</strong> enables highly individualized Siddha medicine adjustments and steady progress tracking.
+                </p>
+              </div>
+              <div className="provider-callout-action">
+                <button className="button button-primary" onClick={() => scrollTo("online-consult")}>
+                  Book Online Consultation <ArrowUpRight size={15} />
+                </button>
+                <a
+                  className="provider-wa-btn"
+                  href="https://wa.me/916374514716?text=Hello%20Dr.%20E.%20Karthiga,%20I%20would%20like%20to%20discuss%20my%20symptoms%20and%20health%20tracking"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle size={15} /> Discuss with Doctor
+                </a>
+              </div>
             </div>
           </div>
         </div>
