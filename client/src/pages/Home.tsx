@@ -1649,22 +1649,21 @@ export default function Home() {
           </div>
 
           {/* Women's Care Feature Banner */}
-          <div style={{ background: "#ffffff", borderRadius: "14px", overflow: "hidden", border: "1px solid rgba(27,60,52,0.12)", boxShadow: "0 8px 24px rgba(27,60,52,0.06)", marginBottom: "36px", display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center" }}>
-            <div style={{ height: "100%", minHeight: "340px" }}>
+          <div className="women-care-feature-banner">
+            <div className="women-care-banner-image">
               <img
                 src={images.womenCareBanner}
                 alt="Dr. E. Karthiga - We care for women because I am a woman"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </div>
-            <div style={{ padding: "40px" }}>
+            <div className="women-care-banner-content">
               <span className="history-card-badge" style={{ background: "#fce7f3", color: "#9d174d" }}>
                 <Heart size={13} /> Women's Healthcare Guidance
               </span>
-              <h3 style={{ fontFamily: "var(--serif)", fontSize: "28px", color: "#1b3c34", margin: "14px 0 12px" }}>
+              <h3>
                 “We care for women because I am a woman.”
               </h3>
-              <p style={{ color: "#54685c", fontSize: "14.5px", lineHeight: "1.7", margin: "0 0 20px" }}>
+              <p>
                 Patients can consult Dr. E. Karthiga to discuss their concerns openly and receive appropriate guidance based on their individual health requirements.
               </p>
               <button className="button button-primary" onClick={() => scrollTo("online-consult")}>

@@ -1321,7 +1321,8 @@ h2 em {
 .train-engine-car {
   position: relative;
   width: 170px;
-  height: 176px;
+  min-height: 205px;
+  height: auto;
   background: linear-gradient(180deg, #1f4d3e 0%, #112d24 100%);
   border: 1px solid rgba(172, 215, 51, 0.45);
   border-radius: 14px 28px 8px 8px;
@@ -1417,15 +1418,16 @@ h2 em {
 
 /* Milestone Carriages */
 .train-carriage-car {
-  width: 260px;
-  height: 176px;
+  width: 320px;
+  min-height: 205px;
+  height: auto;
   background: linear-gradient(180deg, #1a3d33 0%, #153229 100%);
   border: 1px solid rgba(220, 240, 210, 0.18);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 12px 14px 10px;
+  padding: 14px 16px 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   flex-shrink: 0;
   position: relative;
@@ -1487,49 +1489,43 @@ h2 em {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 5px;
   min-height: 0;
 }
 
 .carriage-tag {
-  font-size: 9.5px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: #d6f28f;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.3;
 }
 
 .carriage-title {
-  font-size: 12.5px;
+  font-size: 13.5px;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.25;
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  line-height: 1.35;
+  margin: 2px 0;
+  white-space: normal;
 }
 
 .carriage-institution {
-  font-size: 11px;
-  color: #bdd2c5;
+  font-size: 11.5px;
+  color: #d1e5d8;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.35;
 }
 
 .carriage-extra {
-  font-size: 10px;
-  color: #8faea0;
+  font-size: 11px;
+  color: #a4c9b8;
   font-style: italic;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.35;
 }
 
 /* Wheels */
@@ -4174,6 +4170,48 @@ h2 em {
 /* ==========================================================================
    WOMEN'S & ELDERLY HEALTHCARE
    ========================================================================== */
+.women-care-feature-banner {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(27, 60, 52, 0.12);
+  box-shadow: 0 8px 24px rgba(27, 60, 52, 0.06);
+  margin-bottom: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.women-care-banner-image {
+  height: 100%;
+  min-height: 340px;
+}
+
+.women-care-banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.women-care-banner-content {
+  padding: 40px;
+}
+
+.women-care-banner-content h3 {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: #1b3c34;
+  margin: 14px 0 12px;
+}
+
+.women-care-banner-content p {
+  color: #54685c;
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
 .women-elderly-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -4424,8 +4462,20 @@ h2 em {
   .services-items-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .women-care-feature-banner {
+    grid-template-columns: 1fr;
+  }
   .women-elderly-grid {
     grid-template-columns: 1fr;
+  }
+  .holistic-pillars-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .womens-stages-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .foundations-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
   .workflow-steps-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -4462,5 +4512,120 @@ h2 em {
   }
   .temple-landmark-copy {
     padding: 26px 20px;
+  }
+
+  /* Section 05 Responsive Fix */
+  .women-care-feature-banner {
+    grid-template-columns: 1fr !important;
+  }
+  .women-care-banner-image {
+    min-height: 200px !important;
+    max-height: 260px !important;
+  }
+  .women-care-banner-content {
+    padding: 24px 18px !important;
+  }
+  .women-care-banner-content h3 {
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+  }
+  .women-elderly-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .care-vertical-card {
+    padding: 24px 18px !important;
+  }
+
+  /* Train Animation Responsive Fix */
+  .achievements-train-container {
+    padding: 18px 14px 16px !important;
+    border-radius: 14px !important;
+    margin-top: 24px !important;
+  }
+  .train-track-heading {
+    font-size: 17px !important;
+  }
+  .train-carriage-car {
+    width: 280px !important;
+    min-height: 205px !important;
+    padding: 12px 14px !important;
+  }
+  .train-engine-car {
+    width: 150px !important;
+    min-height: 205px !important;
+  }
+
+  /* Comprehensive Well-Being (Holistic Wellness) Responsive Fix */
+  .holistic-wellness-showcase {
+    padding: 24px 16px !important;
+    border-radius: 14px !important;
+    margin-top: 28px !important;
+  }
+  .holistic-title {
+    font-size: 23px !important;
+    line-height: 1.25 !important;
+  }
+  .holistic-lead-desc {
+    font-size: 17px !important;
+  }
+  .holistic-pillars-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  .womens-stages-card {
+    padding: 20px 14px !important;
+    border-radius: 12px !important;
+  }
+  .womens-stages-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .daily-foundations-box {
+    padding: 20px 14px !important;
+    border-radius: 12px !important;
+  }
+  .foundations-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .provider-tracking-callout {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 22px 16px !important;
+    gap: 16px !important;
+  }
+  .provider-callout-action {
+    width: 100% !important;
+  }
+  .provider-callout-action .button,
+  .provider-wa-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .holistic-title {
+    font-size: 21px !important;
+  }
+  .holistic-lead-desc {
+    font-size: 16px !important;
+  }
+  .train-carriage-car {
+    width: 260px !important;
+  }
+  .train-engine-car {
+    width: 135px !important;
+  }
+  .train-track-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  .women-care-banner-image {
+    min-height: 180px !important;
+    max-height: 220px !important;
   }
 }
